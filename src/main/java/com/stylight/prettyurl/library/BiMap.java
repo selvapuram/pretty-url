@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @param <K> key of the map
  * @param <V> value of the map
  */
-public class BiMap<K, V> extends HashMap<K, V> {
+public class BiMap<K, V> extends ConcurrentHashMap<K, V> {
     private static final long serialVersionUID = 1L;
 
     public Map<V, K> inversedMap = new ConcurrentHashMap<>();

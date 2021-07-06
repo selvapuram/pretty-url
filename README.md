@@ -8,8 +8,8 @@ with [Docker](https://www.docker.com/)
 
 Installed:   
 [Docker](https://www.docker.com/)   
-[git](https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git)
-[Java 1.8](https://www.oracle.com/technetwork/java/javase/overview/index.html)   
+[git](https://www.digitalocean.com/community/tutorials/how-to-contribute-to-open-source-getting-started-with-git)   
+[Java 1.8](https://www.oracle.com/technetwork/java/javase/overview/index.html)  
 [Maven 3.6.3](https://maven.apache.org/install.html)
 
 Optional:   
