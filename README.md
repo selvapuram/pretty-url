@@ -20,7 +20,7 @@ Optional:
 ### Clone source code from git
 
 ```
-$  git clone https://github.com/selvapuram/pretty-url
+$  https://github.com/selvapuram/pretty-url/tree/master
 ```
 
 ### Running the Application
