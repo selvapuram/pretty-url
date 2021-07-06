@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: prettyurl
+
+server:
+  servlet:
+    context-path: /pretty-url
+
+app:
+  base:
+    domain: https://www.stylight.com
