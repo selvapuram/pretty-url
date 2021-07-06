@@ -37,6 +37,6 @@ EXPOSE $DEBUG_PORT
 WORKDIR $APP_HOME
 USER $SPRING_BOOT_USER
 
-COPY --from=maven_build /target/pretty-url-$VERSION.jar $APP_HOME/$ARTIFACT_NAME
+COPY /target/pretty-url-$VERSION.jar $APP_HOME/$ARTIFACT_NAME
 
 ENTRYPOINT ["./entrypoint.sh"]
