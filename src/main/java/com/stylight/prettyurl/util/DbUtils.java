@@ -24,7 +24,8 @@ public class DbUtils {
 
     public void loadDataFromClassPath() throws IOException {
         TypeReference<Map<String, String>> typeReference =
-                new TypeReference<Map<String, String>>() {};
+                new TypeReference<Map<String, String>>() {
+                };
         ClassPathResource classPathResource = new ClassPathResource(BASE_PATH + File.separator + FILE_NAME);
         Map<String, String> testData = objectMapper.readValue(classPathResource.getInputStream(), typeReference);
         inMemoryPrettyUrlMap.loadList(testData);

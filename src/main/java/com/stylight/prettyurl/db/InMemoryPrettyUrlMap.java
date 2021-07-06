@@ -18,16 +18,15 @@ import java.util.Map;
 public class InMemoryPrettyUrlMap {
 
     /**
+     * dictory to store pretty url
+     */
+    private static final BiMap<String, String> dictionary = new BiMap<>();
+    /**
      * The basePath for all relative urls
      */
     @Value("${app.base.domain}")
     @Getter
     private String basePath;
-
-    /**
-     * dictory to store pretty url
-     */
-    private static final BiMap<String, String> dictionary = new BiMap<>();
 
     /**
      * @param key

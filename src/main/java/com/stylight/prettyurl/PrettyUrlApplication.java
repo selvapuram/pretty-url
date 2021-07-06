@@ -10,16 +10,16 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class PrettyUrlApplication implements CommandLineRunner {
 
-	@Autowired
-	ApplicationContext applicationContext;
+    @Autowired
+    ApplicationContext applicationContext;
 
-	public static void main(String[] args) {
-		SpringApplication.run(PrettyUrlApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PrettyUrlApplication.class, args);
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
-		DbUtils dbUtils = applicationContext.getBean(DbUtils.class);
-		dbUtils.loadDataFromClassPath();
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        DbUtils dbUtils = applicationContext.getBean(DbUtils.class);
+        dbUtils.loadDataFromClassPath();
+    }
 }

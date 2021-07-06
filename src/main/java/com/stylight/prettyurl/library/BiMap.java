@@ -8,8 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Class <p>BiMap</p>
  * A bidirectional lookup map
  *
- * @param <K>  key of the map
- * @param <V>  value of the map
+ * @param <K> key of the map
+ * @param <V> value of the map
  */
 public class BiMap<K, V> extends HashMap<K, V> {
     private static final long serialVersionUID = 1L;

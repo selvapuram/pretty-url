@@ -1,8 +1,6 @@
 package com.stylight.prettyurl;
 
-import com.stylight.prettyurl.exception.ErrorModel;
 import org.json.JSONException;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -14,32 +12,26 @@ import org.springframework.http.*;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class PrettyUrlApplicationTests {
 
-    @LocalServerPort
-    public int port;
-
-    @Value("${app.base.domain}")
-	private String basePath;
-
     private final String PRETTY_URL = "/pretty";
     private final String CANONICAL_URL = "/canonical";
-
+    @LocalServerPort
+    public int port;
     TestRestTemplate testRestTemplate = new TestRestTemplate();
-
-
+    @Value("${app.base.domain}")
+    private String basePath;
 
     @Test
     public void testValidGetByKey() throws JSONException {
         //arrange
         List<String> canonicalUrls = Arrays.asList("/products", "/products?gender=female");
         String expected = "{" +
-				"\"" + basePath + "/products\":\"" + basePath + "/Fashion/\"," +
+                "\"" + basePath + "/products\":\"" + basePath + "/Fashion/\"," +
                 "\"" + basePath + "/products?gender=female\":\"" + basePath + "/Women/\"" +
                 "}";
         //act
